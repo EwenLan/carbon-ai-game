@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' ws://localhost:5173"
+    />
+    <title>连词成句 - Carbon AI Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 标题 -->
+      <header id="header">
+        <h1>🔤 连词成句</h1>
+        <span id="subtitle">AI 语文课堂游戏</span>
+      </header>
+
+      <!-- 题目区域 -->
+      <section id="question-area">
+        <p class="label">请用以下词语造句：</p>
+        <div id="word-display">
+          <span id="word-list">点击「下一题」开始</span>
+        </div>
+      </section>
+
+      <!-- 输入模式切换 -->
+      <nav id="mode-tabs">
+        <button id="tab-handwrite" class="tab active">✍️ 手写输入</button>
+        <button id="tab-keyboard" class="tab">⌨️ 键盘输入</button>
+      </nav>
+
+      <!-- 手写面板 -->
+      <section id="panel-handwrite" class="input-panel">
+        <div id="canvas-wrapper">
+          <canvas id="handwrite-canvas"></canvas>
+        </div>
+        <div id="canvas-toolbar">
+          <button id="btn-clear" class="btn btn-secondary">🗑️ 清除</button>
+          <button id="btn-recognize" class="btn btn-primary">🔍 识别并提交</button>
+        </div>
+      </section>
+
+      <!-- 键盘输入面板（默认隐藏） -->
+      <section id="panel-keyboard" class="input-panel hidden">
+        <textarea
+          id="sentence-input"
+          placeholder="在这里输入你的句子..."
+          rows="3"
+        ></textarea>
+        <button id="btn-submit" class="btn btn-primary">✉️ 提交</button>
+      </section>
+
+      <!-- Toast 通知 -->
+      <div id="toast" class="hidden"></div>
+
+      <!-- 加载状态 -->
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p id="loading-text">正在识别中...</p>
+      </div>
+
+      <!-- 评价结果区域 -->
+      <section id="result-area" class="hidden">
+        <h2>🤖 AI 点评</h2>
+
+        <div id="score-display">
+          <span id="score-stars"></span>
+          <span id="score-number"></span>
+        </div>
+
+        <div id="eval-details">
+          <div class="eval-row">
+            <span class="eval-label">📌 词语使用</span>
+            <span id="eval-word-usage"></span>
+          </div>
+          <div class="eval-row">
+            <span class="eval-label">📝 语法</span>
+            <span id="eval-grammar"></span>
+          </div>
+          <div class="eval-row">
+            <span class="eval-label">💬 通顺度</span>
+            <span id="eval-fluency"></span>
+          </div>
+          <div class="eval-row">
+            <span class="eval-label">🇨🇳 价值观</span>
+            <span id="eval-values"></span>
+          </div>
+          <div class="eval-comment">
+            <p id="eval-comment"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 底部操作栏 -->
+      <footer id="footer">
+        <button id="btn-next" class="btn btn-primary">▶️ 下一题</button>
+      </footer>
+    </div>
+
+    <script type="module" src="index.ts"></script>
+  </body>
+</html>

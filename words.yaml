@@ -1,0 +1,80 @@
+- words:
+    - 虽然
+    - 但是
+  used: false
+- words:
+    - 因为
+    - 所以
+  used: false
+- words:
+    - 不但
+    - 而且
+  used: false
+- words:
+    - 只要
+    - 就
+  used: false
+- words:
+    - 即使
+    - 也
+  used: false
+- words:
+    - 如果
+    - 就
+  used: false
+- words:
+    - 无论
+    - 都
+  used: false
+- words:
+    - 尽管
+    - 还是
+  used: false
+- words:
+    - 不仅
+    - 还
+  used: false
+- words:
+    - 既然
+    - 就
+  used: false
+- words:
+    - 要是
+    - 就
+  used: false
+- words:
+    - 除非
+    - 才
+  used: false
+- words:
+    - 与其
+    - 不如
+  used: false
+- words:
+    - 宁可
+    - 也不
+  used: false
+- words:
+    - 之所以
+    - 是因为
+  used: false
+- words:
+    - 只有
+    - 才能
+  used: false
+- words:
+    - 不是
+    - 而是
+  used: false
+- words:
+    - 一边
+    - 一边
+  used: true
+- words:
+    - 首先
+    - 然后
+  used: false
+- words:
+    - 越
+    - 越
+  used: false

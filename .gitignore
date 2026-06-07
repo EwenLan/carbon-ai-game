@@ -216,3 +216,31 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Electron build output
+dist/
+node_modules/
+
+# Secrets & credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+credentials*.json
+service-account*.json
+secrets.yaml
+secrets.yml
+secrets.toml
+
+# Claude Code project settings
+.claude/
+
+# npm registry config (may contain auth tokens)
+.npmrc
+
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini

@@ -1,0 +1,38 @@
+{
+  "name": "carbon-ai-game",
+  "version": "1.0.0",
+  "description": "Electron + TypeScript desktop application for Carbon AI Game",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "tsc && concurrently -k \"tsc -w\" \"vite dev\" \"electron .\"",
+    "build": "tsc && vite build",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EwenLan/carbon-ai-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EwenLan/carbon-ai-game/issues"
+  },
+  "homepage": "https://github.com/EwenLan/carbon-ai-game#readme",
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.9.2",
+    "concurrently": "^10.0.3",
+    "electron": "^42.3.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "js-yaml": "^4.2.0",
+    "openai": "^6.42.0"
+  }
+}
